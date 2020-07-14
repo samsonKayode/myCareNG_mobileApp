@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gradient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/personal"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/buttonTextColor"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/one">
+
+                <EditText
+                    android:id="@+id/firstName"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:layout_gravity="center"
+                    android:hint="@string/firstname" />
+
+                <EditText
+                    android:id="@+id/lastName"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:layout_gravity="center"
+                    android:hint="@string/lastname" />
+
+
+                <EditText
+                    android:id="@+id/dob"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:editable="false"
+
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="textPersonName"
+                    android:onClick="loadDate"
+                    android:longClickable="false"
+                    android:selectAllOnFocus="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="@string/dob" />
+
+                <Spinner
+                    android:id="@+id/new_sex"
+                    android:background="@drawable/spinner_drawable"
+
+                    android:paddingLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/black_overlay"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contact_details"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/personal"
+                android:background="@drawable/gradient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/contact"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/buttonTextColor"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/contact_details"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/city"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:longClickable="false"
+                    android:selectAllOnFocus="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="@string/city" />
+
+                <Spinner
+                    android:id="@+id/state"
+
+                    android:background="@drawable/spinner_drawable"
+                    android:paddingLeft="20dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+
+
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/black_overlay"/>
+
+
+                <EditText
+                    android:id="@+id/phone"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:longClickable="false"
+                    android:selectAllOnFocus="false"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:hint="@string/phone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/security"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/location"
+                android:background="@drawable/gradient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/security"
+                    android:textSize="15sp"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/buttonTextColor"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/sec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/security"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                >
+
+
+                <EditText
+                    android:id="@+id/email"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:longClickable="false"
+                    android:selectAllOnFocus="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="@string/email"/>
+
+
+                <EditText
+                    android:id="@+id/password"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:longClickable="false"
+                    android:selectAllOnFocus="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="@string/password" />
+
+                <EditText
+                    android:id="@+id/hospitalNumber"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="@string/hospital_number" />
+
+                <EditText
+                    android:id="@+id/passkey"
+
+                    android:drawableStart="@drawable/baseline_person_black_24"
+                    android:drawableTint="@color/black_overlay"
+                    android:padding="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="@string/passkey" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sec"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/button_shape_blue"
+                    android:onClick="editProfile"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/update"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonTextColor"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_marginBottom="10dp" />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Dashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.github.florent37.arclayout.ArcLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:arc_cropDirection="cropOutside"
+        app:arc_position="bottom"
+        app:arc_height="50dp"
+        android:elevation="10dp"
+        >
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/gradient">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/im1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/round_settings_white_36"
+                    android:clickable="true"
+
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/im2"
+                    android:layout_toRightOf="@+id/im1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/round_info_white_36"
+                    android:clickable="true"
+
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_marginRight="5dp"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                app:srcCompat="@drawable/baseline_person_white_48"
+                 />
+            <TextView
+                android:id="@+id/fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="xx,xx"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:fontFamily="@font/mavenpro_medium"
+                android:textColor="@color/buttonTextColor"
+                android:layout_below="@+id/sign_up"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="xx@xx.com"
+                android:layout_below="@+id/fullname"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:textColor="@color/buttonTextColor"/>
+
+
+        </RelativeLayout>
+
+    </com.github.florent37.arclayout.ArcLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <!-- First row...-->
+
+            <LinearLayout
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/card_width"
+                    android:layout_height="@dimen/card_height"
+                    android:layout_margin="@dimen/card_elevation"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="@dimen/card_radius"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/circle_green"
+                            android:src="@drawable/records"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/medical_records"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/light_gray_line"
+                            android:layout_margin="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/medical_records_desc"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/darker_gray"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/card_width"
+                    android:layout_height="@dimen/card_height"
+                    android:layout_margin="10dp"
+                    android:elevation="@dimen/card_elevation"
+                    app:cardCornerRadius="@dimen/card_radius"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/circle_yellow"
+                            android:src="@drawable/lab"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/lab_records"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/light_gray_line"
+                            android:layout_margin="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_records_desc"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <!--Second Row-->
+
+            <LinearLayout
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/appointment"
+                    android:layout_width="@dimen/card_width"
+                    android:layout_height="@dimen/card_height"
+                    android:layout_margin="@dimen/card_elevation"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="@dimen/card_radius"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:onClick="gotoAppointment">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/circle_purple"
+                            android:src="@drawable/appointment"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/appointment"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/light_gray_line"
+                            android:layout_margin="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/appointment_desc"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/darker_gray"/>
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/hospital"
+                    android:layout_width="@dimen/card_width"
+                    android:layout_height="@dimen/card_height"
+                    android:layout_margin="10dp"
+                    android:elevation="@dimen/card_elevation"
+                    app:cardCornerRadius="@dimen/card_radius"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:onClick="gotoHospital">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/circle_edu"
+                            android:src="@drawable/books"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/education"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/light_gray_line"
+                            android:layout_margin="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/education_desc"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <!--Third Row-->
+
+            <LinearLayout
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="340dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="@dimen/card_elevation"
+                    android:elevation="10dp"
+                    app:cardCornerRadius="@dimen/card_radius"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:onClick="gotoSetting">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/circle_hospitals"
+                            android:src="@drawable/round_settings_white_36"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/setting"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/light_gray_line"
+                            android:layout_margin="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_desc"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/darker_gray"/>
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

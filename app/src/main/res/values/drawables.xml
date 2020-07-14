@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="error_icon" type="drawable">@drawable/baseline_error_black_24</item>
+
+</resources>
